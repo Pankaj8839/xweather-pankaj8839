@@ -26,8 +26,8 @@ function App() {
 
   const searchWeather = async () => {
     const fetchWeatherData=async ()=>{
+      setIsLoading(true);
       try{
-        setIsLoading(true);
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${Key}&q=${city}&aqi=no`);
         const data = await response.json();
         if(!response.ok){
@@ -59,7 +59,7 @@ function App() {
    </div>
    <br/>
    {isLoading &&(
-     <p>Loading data…</p>
+     <p>Loading data...</p>
    )}
    <br/>
    {!isLoading && weather.temp_c &&(
