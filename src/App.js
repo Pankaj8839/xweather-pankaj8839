@@ -68,11 +68,8 @@ function App() {
      <WeatherCard title="Humidity" value={weather.humidity} />
      <WeatherCard title="Condition" value={weather.condition} />
      <WeatherCard title="Wind Speed" value={weather.wind_kph} />
-   
     </div>
     )}
-  
-
     </div>
   );
 }
